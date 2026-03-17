@@ -30,7 +30,7 @@
           <ul>
             <li><a href="./home.html">Home</a></li>
             <li><a href="<?php echo site_url('/mission'); ?>">Missions</a></li>
-            <li><a href="./space_craft.html">Spacecraft</a></li>
+            <li><a href="<?php echo site_url('/space'); ?>">Spacecraft</a></li>
             <li><a href="./gallery.html">Gallery</a></li>
             <li><a href="./contact.html">Contact</a></li>
           </ul>
