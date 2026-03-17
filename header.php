@@ -28,11 +28,11 @@
 
         <nav class="header__nav">
           <ul>
-            <li><a href="./home.html">Home</a></li>
+            <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
             <li><a href="<?php echo site_url('/mission'); ?>">Missions</a></li>
             <li><a href="<?php echo site_url('/space'); ?>">Spacecraft</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="<?php echo site_url('/gallery'); ?>">Gallery</a></li>
+            <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
           </ul>
         </nav>
       </div>

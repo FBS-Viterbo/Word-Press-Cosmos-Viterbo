@@ -56,6 +56,25 @@ function cvd_custom_post()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
     );
 
+    $gallery_label = array(
+        'name' => __('Gallery_Imgs', 'textdomain'),
+        'singular_name' => __('Gallery_Img', 'textdomain'),
+        'add_new' => __('Add Gallery_Img', 'textdomain'),
+        'edit_item' => __('Edit Gallery_Img', 'textdomain'),
+        'add_new_item' => __('Add New Gallery_Img', 'textdomain'),
+        'all_items' => __('Gallery_Imgs', 'textdomain')
+    );
+
+    $gallery_args = array(
+        'labels' => $gallery_label,
+        'public' => true,
+        'capability_type' => 'post',
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
+    );
+
+    register_post_type('gallery', $gallery_args);
     register_post_type('space_craft_cards', $space_craft_cards_args);
     register_post_type('mission_cards', $mission_cards_args);
     register_post_type('front_page_cards', $front_page_cards_args);
