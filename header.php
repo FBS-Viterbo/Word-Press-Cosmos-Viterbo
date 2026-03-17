@@ -16,7 +16,7 @@
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
-            <img src="../img/logo.png" alt="" />
+            <?php the_custom_logo()?>
             <h3>COSMOS</h3>
           </div>
 
