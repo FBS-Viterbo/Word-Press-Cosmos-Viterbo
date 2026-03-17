@@ -50,7 +50,5 @@
       </div>
     </footer>
 
-    <script src="../js/headerNav.js"></script>
-    <script src="../js/burger.js"></script>
   </body>
 </html>
