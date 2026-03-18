@@ -1239,6 +1239,11 @@
     border-width: 1px;
     border-color: #919395;
     background-color: #141c34;
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--starlight);
+      }
+    }
   }
   .mission__card .card__status {
     position: absolute;

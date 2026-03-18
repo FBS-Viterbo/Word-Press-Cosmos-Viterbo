@@ -27,13 +27,33 @@
           <span></span>
         </button>
 
+        <?php
+        global $wp;
+        $current_slug = $wp->request;
+        ?>
+
         <nav class="header__nav">
           <ul>
-            <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
-            <li><a href="<?php echo site_url('/missions'); ?>">Missions</a></li>
-            <li><a href="<?php echo site_url('/space'); ?>">Spacecraft</a></li>
-            <li><a href="<?php echo site_url('/gallery'); ?>">Gallery</a></li>
-            <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>
+            <li class="<?php echo ($current_slug == '') ? 'active' : ''; ?>">
+              <a href="<?php echo site_url('/'); ?>">Home</a>
+            </li>
+
+            <li
+              class="<?php echo ($current_slug == 'missions' || $current_slug == 'mission_cards') ? 'active' : ''; ?>">
+              <a href="<?php echo site_url('/missions'); ?>">Missions</a>
+            </li>
+
+            <li class="<?php echo ($current_slug == 'space-craft') ? 'active' : ''; ?>">
+              <a href="<?php echo site_url('/space'); ?>">Spacecraft</a>
+            </li>
+
+            <li class="<?php echo ($current_slug == 'gallery') ? 'active' : ''; ?>">
+              <a href="<?php echo site_url('/gallery'); ?>">Gallery</a>
+            </li>
+
+            <li class="<?php echo ($current_slug == 'contact') ? 'active' : ''; ?>">
+              <a href="<?php echo site_url('/contact'); ?>">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>

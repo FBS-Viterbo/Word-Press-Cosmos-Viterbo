@@ -1,12 +1,14 @@
 <?php
 
-function cvd_assets(){
+function cvd_assets()
+{
     wp_enqueue_style(
-    'cvd-styles',
-    get_template_directory_uri() . "/css/styles.css",
-    microtime());
+        'cvd-styles',
+        get_template_directory_uri() . "/css/styles.css",
+        microtime()
+    );
     wp_enqueue_style('cvd-icon', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css', 1.0);
-    
+
     // Burger script
     wp_enqueue_script(
         'cvd-burger',
@@ -16,14 +18,6 @@ function cvd_assets(){
         true
     );
 
-    // Header navigation script
-    wp_enqueue_script(
-        'cvd-header-nav',
-        get_template_directory_uri() . '/js/headerNav.js',
-        [],
-        microtime(),
-        true
-    );
 }
 
 add_action('wp_enqueue_scripts', 'cvd_assets');

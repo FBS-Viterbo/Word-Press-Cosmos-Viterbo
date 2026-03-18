@@ -1,7 +1,13 @@
 <?php get_header(); ?>
 
 <!-- banner -->
-<section class="banner flex items-center justify-center text-center py-20 h-[800px]">
+<?php $img = get_field('bg_front'); ?>
+<section class="banner flex items-center justify-center text-center py-20 h-[800px]" style="
+    background: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), url('<?php echo esc_url($img['url']); ?>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  ">
   <div class="container">
     <div class="banner__wrapper flex flex-col items-center gap-5">
       <button class="btn btn--third">
