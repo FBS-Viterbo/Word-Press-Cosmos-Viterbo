@@ -74,6 +74,24 @@ function cvd_custom_post()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
     );
 
+    $contact_label = array(
+        'name' => __('Contact_Infos', 'textdomain'),
+        'singular_name' => __('Contact_Info', 'textdomain'),
+        'add_new' => __('Add Contact_Info', 'textdomain'),
+        'edit_item' => __('Edit Contact_Info', 'textdomain'),
+        'add_new_item' => __('Add New Contact_Info', 'textdomain'),
+        'all_items' => __('Contact_Infos', 'textdomain')
+    );
+
+    $contact_args = array(
+        'labels' => $contact_label,
+        'public' => true,
+        'capability_type' => 'post',
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
+    );
+    register_post_type('contact_infos', $contact_args);
     register_post_type('gallery', $gallery_args);
     register_post_type('space_craft_cards', $space_craft_cards_args);
     register_post_type('mission_cards', $mission_cards_args);

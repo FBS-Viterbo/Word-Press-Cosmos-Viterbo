@@ -1230,7 +1230,9 @@
   }
   .mission__card {
     position: relative;
+    display: flex;
     max-width: 480px;
+    flex-direction: column;
     overflow: hidden;
     border-radius: var(--radius-2xl);
     border-style: var(--tw-border-style);
@@ -1283,7 +1285,7 @@
     color: var(--color-red-500);
   }
   .mission__card .mc__image img {
-    max-height: 250px;
+    height: 250px;
     width: 100%;
     object-fit: cover;
   }

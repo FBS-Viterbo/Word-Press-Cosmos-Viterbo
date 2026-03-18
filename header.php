@@ -29,7 +29,7 @@
         <nav class="header__nav">
           <ul>
             <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
-            <li><a href="<?php echo site_url('/mission'); ?>">Missions</a></li>
+            <li><a href="<?php echo site_url('/missions'); ?>">Missions</a></li>
             <li><a href="<?php echo site_url('/space'); ?>">Spacecraft</a></li>
             <li><a href="<?php echo site_url('/gallery'); ?>">Gallery</a></li>
             <li><a href="<?php echo site_url('/contact'); ?>">Contact</a></li>

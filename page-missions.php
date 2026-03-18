@@ -36,7 +36,7 @@ $background_img = get_field("background");
                 <?php while ($cards->have_posts()):
                     $cards->the_post() ?>
 
-                    <a href="./card.html">
+                    <a href="<?php the_permalink() ?>">
                         <div class="mission__card">
 
                             <?php $is_active = get_field('is_active'); ?>
