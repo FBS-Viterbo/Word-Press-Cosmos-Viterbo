@@ -29,7 +29,7 @@ $background_img = get_field("background");
             <?php
             $cards = new WP_Query(array(
                 'post_type' => 'mission_cards',
-                'post_per_page' => -1,
+                'posts_per_page' => -1,
             ));
             ?>
             <?php if ($cards->have_posts()): ?>
