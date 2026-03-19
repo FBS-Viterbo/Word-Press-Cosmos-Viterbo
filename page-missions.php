@@ -14,7 +14,7 @@ $background_img = get_field("background");
     <div class="container">
         <div class="banner__title__wrapper flex flex-col items-center justify-center">
             <h2 class="text-white"><?php echo the_field('title') ?></h2>
-            <p class="text-secondary mt-5">
+            <p class="max-w-[650px] text-center text-secondary mt-5">
                 <?php echo the_field('info') ?>
             </p>
         </div>

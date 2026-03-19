@@ -283,19 +283,50 @@
             <?php if ($cards->have_posts()): ?>
                 <?php while ($cards->have_posts()):
                     $cards->the_post(); ?>
-                    <div class="selected__mission__card">
-                        <?php
-                        $card_img = get_field("card_img");
-                        ?>
-                        <img src="<?php echo esc_url(wp_get_attachment_image_url($card_img['ID'], 'full')) ?>"
-                            alt="Banner image">
-                        <div class="text">
-                            <h5><?php the_title() ?></h5>
-                            <p>
-                                <?php echo the_field('info') ?>
-                            </p>
+                    <a href="<?php the_permalink() ?>">
+                        <div class="mission__card">
+
+                            <?php $is_active = get_field('is_active'); ?>
+
+
+                            <div class="card__status <?php echo ($is_active == 1) ? 'card__active' : 'card__not__active'; ?>">
+                                <p>
+                                    <?php echo ($is_active == 1) ? 'Active' : 'Upcoming'; ?>
+                                </p>
+                            </div>
+
+                            <!-- image -->
+                            <div class="mc__image">
+                                <?php
+                                $card_img = get_field("card_img");
+                                ?>
+                                <img src="<?php echo esc_url(wp_get_attachment_image_url($card_img['ID'], 'full')) ?>"
+                                    alt="Banner image">
+                            </div>
+                            <!-- info -->
+                            <div class="info">
+                                <div class="date">
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <p class="date__text">Launched: July 2020</p>
+                                </div>
+                                <h4><?php the_title() ?></h4>
+                                <p>
+                                    <?php echo the_field('info') ?>
+                                </p>
+                                <span class="line"></span>
+                                <div class="bot__icon">
+                                    <div class="content__icon">
+                                        <p><?php the_field('l_icon') ?></p>
+                                        <p><?php the_field('l_info') ?></p>
+                                    </div>
+                                    <div class="content__icon">
+                                        <p><?php the_field('r_icon') ?></p>
+                                        <p><?php the_field('r_info') ?></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 <?php endwhile; ?>
             <?php endif;
             wp_reset_postdata(); ?>

@@ -9,7 +9,16 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="bg-primary">
+<?php
+$background_img = get_field("bg");
+?>
+
+<body style="
+    background: linear-gradient(rgba(5, 11, 24, 0.8), rgba(5, 11, 24, 0.8)), url('<?php echo esc_url($background_img['url']); ?>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  " class="bg-primary">
 
   <!-- header -->
   <header class="header">

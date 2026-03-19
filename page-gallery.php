@@ -5,7 +5,7 @@
     <div class="contaner">
         <div class="flex flex-col gap-4 text-center mb-15 mt-15">
             <h2 class="text-white"><?php echo the_field('title') ?></h2>
-            <p class="text-secondary">
+            <p class="max-w-[650px] m-auto text-secondary">
                 <?php echo the_field('info') ?>
             </p>
         </div>

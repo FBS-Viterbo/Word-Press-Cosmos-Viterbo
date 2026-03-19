@@ -6,7 +6,7 @@
         <div class="main__content__wrapper">
             <div class="flex flex-col gap-5 items-center justify-center text-center">
                 <p class="text-3xl font-bold md:text-5xl"><?php echo the_field('title') ?></p>
-                <p><?php echo the_field('info') ?></p>
+                <p class="max-w-[630px]"><?php echo the_field('info') ?></p>
             </div>
             <div class="space__craft__content flex flex-col items-center justify-center mb-20">
 

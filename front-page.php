@@ -17,7 +17,7 @@
         class="title bg-gradient-to-r from-white via-pink-300 to-pink-500 bg-clip-text text-transparent max-w-[650px]">
         <?php echo the_field("title") ?>
       </h1>
-      <p class="text-secondary">
+      <p class="max-w-[600px] text-secondary">
         <?php echo the_field("short_info") ?>
       </p>
       <div class="controls flex items-center gap-4 mt-6">
