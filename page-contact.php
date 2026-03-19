@@ -81,8 +81,7 @@
                     </div>
 
                     <!-- Button -->
-                    <button type="submit"
-                        class="w-full bg-pink-500 hover:bg-pink-600 transition rounded-full py-3 font-semibold shadow-lg shadow-pink-500/30">
+                    <button type="submit" class="btn btn--primary w-full">
                         Send Message 🚀
                     </button>
                 </form>
